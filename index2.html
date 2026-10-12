@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İzmir Mobil Berber | Premium Saç Kesimi</title>
+    <style>
+        :root {
+            --bg-color: #111111;
+            --text-color: #f5f5f5;
+            --accent-color: #d4af37;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-top: 0;
+            color: #aaa;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .slogan {
+            font-size: 1.8em;
+            text-align: center;
+            margin: 40px 0;
+            font-weight: bold;
+        }
+        .card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .offer {
+            background-color: var(--accent-color);
+            color: #000;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 40px 0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        ul li::before {
+            content: "✦ ";
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="lang-switch" onclick="toggleLang()">EN / TR</button>
+
+    <header>
+        <h1>BARBER SERVICE</h1>
+        <h2 class="tr-text">İzmir Premium Mobil Berber Hizmeti</h2>
+        <h2 class="en-text" style="display:none;">Izmir Premium Mobile Barber Service</h2>
+    </header>
+
+    <div class="container">
+        <div class="slogan tr-text">BERBERE DEĞİL, ZANAAT SİZE GELİR.</div>
+        <div class="slogan en-text" style="display:none;">CRAFT COMES TO YOU, NOT THE BARBERSHOP.</div>
+
+        <div class="card">
+            <h3 class="tr-text" style="color: var(--accent-color);">Otel Konforunda Hizmet</h3>
+            <h3 class="en-text" style="display:none; color: var(--accent-color);">Hotel Comfort Service</h3>
+            <p class="tr-text">4 yıllık lüks otelcilik tecrübesiyle, yüksek hijyen standartlarını ve premium saç kesimi deneyimini evinizin, ofisinizin veya yatınızın konforuna taşıyorum.</p>
+            <p class="en-text" style="display:none;">With 4 years of luxury hospitality experience, I bring high hygiene standards and a premium haircut experience to your location.</p>
+        </div>
+
+        <div class="offer">
+            <div class="tr-text">GİZEMLİ KART SAHİPLERİNE ÖZEL:<br>İlk "Tanışma Tıraşı" Randevunuzda %50 Ayrıcalık!</div>
+            <div class="en-text" style="display:none;">EXCLUSIVE FOR MYSTERY CARD HOLDERS:<br>50% Privilege on Your First "Meet & Greet" Shave!</div>
+        </div>
+
+        <div class="card">
+            <h3 class="tr-text" style="color: var(--accent-color);">Hizmet Bölgeleri</h3>
+            <h3 class="en-text" style="display:none; color: var(--accent-color);">Service Areas</h3>
+            <ul class="tr-text">
+                <li>Bayraklı & Plazalar Bölgesi</li>
+                <li>Narlıdere & Sahilevleri Villaları</li>
+                <li>Mavişehir & Bostanlı Siteleri</li>
+                <li>Alsancak & Kordon Çevresi</li>
+                <li>Levent Marina & Yat İskelesi</li>
+            </ul>
+            <ul class="en-text" style="display:none;">
+                <li>Bayraklı & Plaza District</li>
+                <li>Narlıdere & Sahilevleri Villas</li>
+                <li>Mavişehir & Bostanlı Residences</li>
+                <li>Alsancak & Kordon Area</li>
+                <li>Levent Marina & Yacht Docks</li>
+            </ul>
+        </div>
+
+        <a href="https://wa.me/905000000000" class="btn tr-text">WhatsApp'tan Randevu Al</a>
+        <a href="https://wa.me/905000000000" class="btn en-text" style="display:none;">Book via WhatsApp</a>
+    </div>
+
+    <script>
+        let currentLang = 'tr';
+        function toggleLang() {
+            const trTexts = document.querySelectorAll('.tr-text');
+            const enTexts = document.querySelectorAll('.en-text');
+            if (currentLang === 'tr') {
+                trTexts.forEach(el => el.style.display = 'none');
+                enTexts.forEach(el => el.style.display = 'block');
+                currentLang = 'en';
+            } else {
+                trTexts.forEach(el => el.style.display = 'block');
+                enTexts.forEach(el => el.style.display = 'none');
+                currentLang = 'tr';
+            }
+        }
+    </script>
+</body>
+</html>
